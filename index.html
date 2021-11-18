@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://kit.fontawesome.com/4872505e1c.js" crossorigin="anonymous"></script>
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Fast Food</title>
+</head>
+<body class="h-screen py-6 mx-auto text-center bg-gray-200">
+
+  <div class="flex px-4 h-full">
+
+    <div class="flex-grow grid grid-rows-5 gap-4 mr-4">
+
+      <div class="row-span-3 grid grid-cols-2 gap-4">
+      
+        <section class="bg-gray-500 rounded-lg overflow-hidden flex flex-col">
+        
+          <div class="flex">
+            <input class="flex-grow h-14 px-2 border-4 border-gray-600 rounded-tl-lg" type="search" name="clientSearch" id=""
+              placeholder="CLIENTE">
+        
+            <div
+              class="bg-gray-600 w-14 text-white text-lg flex items-center justify-center cursor-pointer border-r-4 border-gray-700 hover:bg-blue-500">
+              <i class="fas fa-user-plus"></i>
+            </div>
+            <div class="bg-gray-600 w-14 text-white text-lg flex items-center justify-center cursor-pointer hover:bg-blue-500">
+              <i class="fas fa-user-tag"></i>
+            </div>
+          </div>
+        
+          <table class="table-fixed border-collapse w-full bg-gray-100 text-left">
+            <tr>
+              <th class="w-8 py-2 pl-2 bg-gray-700 text-gray-200">#</th>
+              <th class="py-2 pl-1 bg-gray-700 text-gray-200">Producto</th>
+              <th class="w-14 py-2 pl-1 bg-gray-700 text-gray-200">Cant</th>
+              <th class="w-20 py-2 pl-1 bg-gray-700 text-gray-200">SubTotal</th>
+              <th class="w-32 py-2 pl-1 bg-gray-700 text-gray-200">Estado</th>
+            </tr>
+          </table>
+        
+          <div class="flex-auto overflow-auto">
+            <table class="table-fixed border-collapse w-full bg-gray-100 text-left">
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="w-8 pl-2 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ceviche Clasico</td>
+                <td class="w-14 pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="w-20 pl-1 py-2 border-b border-gray-300">24</td>
+                <td class="w-28 pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">2</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Tiradito</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">26</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">3</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Jalea Mixta</td>
+                <td class="pl-1 py-2 border-b border-gray-300">2</td>
+                <td class="pl-1 py-2 border-b border-gray-300">58</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">4</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Limonada Frozen</td>
+                <td class="pl-1 py-2 border-b border-gray-300">2</td>
+                <td class="pl-1 py-2 border-b border-gray-300">26</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">5</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ensalada Fresca</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">8</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">5</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ensalada Fresca</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">8</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">5</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ensalada Fresca</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">8</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">5</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ensalada Fresca</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">8</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">5</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ensalada Fresca</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">8</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">5</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ensalada Fresca</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">8</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">5</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ensalada Fresca</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">8</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">5</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ensalada Fresca</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">8</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+              <tr class="hover:bg-blue-100 cursor-pointer">
+                <td class="pl-2 py-2 border-b border-gray-300">5</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Ensalada Fresca</td>
+                <td class="pl-1 py-2 border-b border-gray-300">1</td>
+                <td class="pl-1 py-2 border-b border-gray-300">8</td>
+                <td class="pl-1 py-2 border-b border-gray-300">Pendiente</td>
+              </tr>
+            </table>
+          </div>
+        
+          <div class="full-w flex">
+            <div
+              class="h-14 bg-gray-600 text-white text-lg flex justify-center items-center cursor-pointer border-gray-700 border-r-4 hover:bg-blue-500 flex-1">
+              <i class="fas fa-minus-circle"></i>
+            </div>
+            <div
+              class="h-14 bg-gray-600 text-white text-lg flex justify-center items-center cursor-pointer border-gray-700 border-r-4 hover:bg-blue-500 flex-1">
+              <i class="fas fa-comment-alt"></i>
+            </div>
+            <div
+              class="h-14 bg-gray-600 text-white text-lg flex justify-center items-center cursor-pointer border-gray-700 border-r-4 hover:bg-blue-500 flex-1">
+              <i class="fas fa-trash-alt"></i>
+            </div>
+            <div
+              class="h-14 bg-gray-600 text-white text-lg flex justify-center items-center cursor-pointer border-gray-700 border-r-4 hover:bg-blue-500 flex-1">
+              <i class="fas fa-unlock-alt"></i>
+            </div>
+            <div
+              class="h-14 bg-gray-600 text-white text-lg flex justify-center items-center cursor-pointer  hover:bg-blue-500 flex-1">
+              <i class="fas fa-edit"></i>
+            </div>
+          </div>
+        
+          <div class="flex py-3 px-2 bg-white">
+            <span
+              class="flex-1 inline-block h-9 m-1 py-1 px-3 border border-blue-400 overflow-hidden text-white rounded-full cursor-pointer hover:bg-blue-400 hover:text-white bg-blue-400">
+              Comiendo
+            </span>
+            <span
+              class="flex-1 inline-block h-9 m-1 py-1 px-3 border border-blue-400 overflow-hidden text-blue-400 rounded-full cursor-pointer hover:bg-blue-400 hover:text-white">
+              Llevar
+            </span>
+            <span
+              class="flex-1 inline-block h-9 m-1 py-1 px-3 border border-blue-400 overflow-hidden text-blue-400 rounded-full cursor-pointer hover:bg-blue-400 hover:text-white">
+              Salón
+            </span>
+            <span
+              class="flex-1 inline-block h-9 m-1 py-1 px-3 border border-blue-400 overflow-hidden text-blue-400 rounded-full cursor-pointer hover:bg-blue-400 hover:text-white">
+              Delivery
+            </span>
+            <span
+              class="flex-1 inline-block h-9 m-1 py-1 px-3 border border-blue-400 overflow-hidden text-blue-400 rounded-full cursor-pointer hover:bg-blue-400 hover:text-white">
+              Web
+            </span>
+          </div>
+        
+        </section>
+        
+        <section class="h-full bg-gray-500 rounded-lg overflow-hidden flex flex-col">
+        
+          <div class="flex max-h-full overflow-hidden">
+        
+            <div class="p-3 flex-grow max-h-full">
+              <div id="productsGrid" class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 max-h-full overflow-auto">
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Ceviche clasico</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 2</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 3</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 4</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 5</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 6</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 7</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 8</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 9</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 10</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 11</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 12</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 13</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 14</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 15</div>
+                <div
+                  class="products h-16 bg-gray-200 rounded cursor-pointer hover:bg-blue-200 flex items-center justify-center">
+                  Producto 16</div>
+              </div>
+            </div>
+        
+            <div class="flex-none flex flex-col">
+              <div id="undo_pg"
+                class="w-14 bg-gray-600 border-b-4 border-gray-700 text-white text-lg flex-1 flex items-center justify-center cursor-pointer hover:bg-blue-500">
+                <i class="fas fa-undo-alt"></i>
+              </div>
+              <div id="top_pg"
+                class="w-14 bg-gray-600 border-b-4 border-gray-700 text-white text-lg flex-1 flex items-center justify-center cursor-pointer hover:bg-blue-500">
+                <i class="fas fa-angle-double-up"></i>
+              </div>
+              <div id="up_pg"
+                class="w-14 bg-gray-600 border-b-4 border-gray-700 text-white text-lg flex-1 flex items-center justify-center cursor-pointer hover:bg-blue-500">
+                <i class="fas fa-angle-up"></i>
+              </div>
+              <div id="down_pg"
+                class="w-14 bg-gray-600 border-b-4 border-gray-700 text-white text-lg flex-1 flex items-center justify-center cursor-pointer hover:bg-blue-500">
+                <i class="fas fa-angle-down"></i>
+              </div>
+              <div id="bottom_pg"
+                class="w-14 bg-gray-600 border-gray-700 text-white text-lg flex-1 flex items-center justify-center cursor-pointer hover:bg-blue-500">
+                <i class="fas fa-angle-double-down"></i>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="flex-none flex border-t-4 border-gray-700">
+        
+            <input class="px-2 flex-auto rounded-bl-lg border-b-4 border-l-4 border-gray-600" type="search" name="search" id=""
+              placeholder="BUSCAR">
+        
+            <div class="flex">
+              <div
+                class="h-14 w-14 bg-gray-600 text-white text-lg cursor-pointer hover:bg-blue-500 flex items-center justify-center cursor-pointer hover:bg-blue-500">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+        
+          </div>
+        
+        </section>
+
+      </div>
+      
+      <div class="row-span-2 grid grid-cols-3 gap-4">
+      
+        <section class="px-3 py-4 bg-gray-100 rounded-lg overflow-auto">
+          <div class="py-1 pl-2 font-2 text-left text-3xl font-bold text-gray-500">Resumen</div>
+        
+          <div class="relative">
+            <div id="kind-receipt" class="flex py-1 overflow-hidden overscroll-contain">
+              <span
+                class="flex-1 inline-block text-xs md:text-sm lg:text-base m-1 py-1 px-3 border border-blue-400 text-white rounded-full cursor-pointer hover:bg-blue-400 hover:text-white bg-blue-400">
+                Boleta
+              </span>
+              <span
+                class="flex-1 inline-block text-xs md:text-sm lg:text-base m-1 py-1 px-3 border border-blue-400 text-blue-400 rounded-full cursor-pointer hover:bg-blue-400 hover:text-white">
+                Factura
+              </span>
+              <span
+                class="flex-1 inline-block text-xs md:text-sm lg:text-base m-1 py-1 px-3 border border-blue-400 text-blue-400 rounded-full cursor-pointer hover:bg-blue-400 hover:text-white">
+                Interno
+              </span>
+            </div>
+            
+            <div class="absolute w-1/6 h-full inset-y-0 right-0 bg-gradient-to-r from-transparent to-gray-400 md:hidden"></div>
+          </div>
+        
+          <div class="py-1 px-1 lg:px-5 grid grid-cols-2 text-left text-xs lg:text-sm text-gray-600 font-semibold">
+            <div>IGV:</div>
+            <div class="text-right"><span class="text-xs text-gray-500">S/ </span> 99.99</div>
+            <div>SERVICIOS:</div>
+            <div class="text-right"><span class="text-xs text-gray-500">S/ </span> 99.99</div>
+            <div>ICBPER:</div>
+            <div class="text-right"><span class="text-xs text-gray-500">S/ </span> 99.99</div>
+            <div>DESCUENTO:</div>
+            <div class="text-right"><span class="text-xs text-gray-500">S/ </span> 99.99</div>
+        
+            <div class="md:text-lg lg:text-xl xl:text-2xl font-bold">TOTAL:</div>
+            <div class="md:text-lg lg:text-xl xl:text-2xl font-bold text-right">
+              <span class="text-xs text-gray-500">S/ </span> 999.00
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row">
+            <div class="flex-auto mt-1 md:my-2 md:mr-3 py-3 text-white bg-gray-700 font-semibold rounded cursor-pointer
+                                hover:bg-blue-500 hover:text-white">
+              <i class="fas fa-file-alt mr-1"></i> Precuenta
+            </div>
+            <div class="flex-auto mt-1 md:my-2 py-3 text-white bg-gray-700 font-semibold rounded cursor-pointer
+                                  hover:bg-blue-500 hover:text-white">
+              <i class="fas fa-shopping-cart mr-1"></i> Paga Detalle
+            </div>
+          </div>
+        
+        </section>
+
+        <section class="col-span-2 bg-gray-600 pt-2 rounded-lg overflow-auto">
+          <div class="px-4 py-1 text-left text-2xl text-gray-200 font-bold">Medio de Pago</div>
+          <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2 p-3">
+            <div class="h-20 rounded cursor-pointer" style="background-color: #FFEDCB;">
+              <img class="h-full mx-auto" src="/assets/svg/soles_light1.svg" alt="">
+            </div>
+            <div class="h-20 rounded cursor-pointer" style="background-color: #E5FFCB;">
+              <img class="h-full mx-auto" src="/assets/svg/dolar_light1.svg" alt="">
+            </div>
+            <div class="h-20 rounded cursor-pointer" style="background-color: white;">
+              <img class="h-full mx-auto" src="/assets/svg/visa_light1.svg" alt="">
+            </div>
+            <div class="h-20 rounded cursor-pointer"
+              style="background: linear-gradient(90deg, rgba(255,215,219,1) 0%, rgba(255,243,217,1) 100%);">
+              <img class="h-full mx-auto" src="/assets/svg/mastercard_light1.svg" alt="">
+            </div>
+            <div class="h-20 rounded cursor-pointer" style="background-color: #830094;">
+              <img class="h-full mx-auto" src="/assets/svg/yape_dark1.svg" alt="">
+            </div>
+            <div class="h-20 rounded cursor-pointer" style="background-color: #D7FFF9;">
+              <img class="h-full mx-auto" src="/assets/svg/plin_light1.svg" alt="">
+            </div>
+            <div class="h-20 rounded cursor-pointer" style="background-color: #FFDFF0;">
+              <img class="h-full mx-auto" src="/assets/svg/tunki_light1.svg" alt="">
+            </div>
+            <div class="h-20 rounded cursor-pointer" style="background-color: #FFCD1B;">
+              <img class="h-full mx-auto" src="/assets/svg/glovo_light1.svg" alt="">
+            </div>
+            <div class="h-20 rounded cursor-pointer" style="background-color: black;">
+              <img class="h-full mx-auto" src="/assets/svg/uberEats_dark1.svg" alt="">
+            </div>
+          </div>
+        </section>
+      
+      </div>
+
+    </div>
+
+    <div class="h-full w-24 flex flex-col">
+
+      <div class="w-24 bg-gray-700 rounded-lg p-2 mb-4 text-white cursor-pointer hover:bg-blue-500">
+        <i class="fas fa-plus-circle text-3xl"></i>
+        <p class="font-bold">Nueva Orden</p>
+      </div>
+
+      <section class="flex-grow rounded-lg overflow-hidden flex flex-col">
+        <div class="bg-gray-700 pt-2">
+          <i class="fas fa-clipboard-list text-white text-xl"></i>
+          <div class="bg-gray-700 pb-2 text-white font-bold text-md">Pendientes</div>
+        </div>
+      
+        <div class="flex-grow overflow-hidden divide-y-2 divide-gray-400 bg-gray-200 bg-stripes bg-stripes-gray-400">
+          <div class="bg-gray-300 py-2 text-left px-3 cursor-pointer hover:bg-blue-300">
+            <p>n° 84</p>
+            <p>Lucas</p>
+          </div>
+          <div class="bg-gray-300 py-2 text-left px-3 cursor-pointer hover:bg-blue-300">
+            <p>n° 87</p>
+            <p>Marcos</p>
+          </div>
+          <div class="bg-gray-300 py-2 text-left px-3 cursor-pointer hover:bg-blue-300">
+            <p>n° 86</p>
+            <p>Daniel</p>
+          </div>
+          <div class="bg-gray-300 py-2 text-left px-3 cursor-pointer hover:bg-blue-300">
+            <p>n° 90</p>
+            <p>Augustino</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

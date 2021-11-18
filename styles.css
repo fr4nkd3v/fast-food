@@ -1,0 +1,75 @@
+:root {
+  --stripes-color: white;
+}
+
+#productsGrid {
+  scroll-behavior: smooth;
+}
+
+/* Para las lineas de colores */
+
+.bg-stripes {
+  background-image: linear-gradient(
+    45deg,
+    var(--stripes-color) 22%,
+    transparent 22%,
+    transparent 49%,
+    var(--stripes-color) 49%,
+    var(--stripes-color) 70%,
+    transparent 70%,
+    transparent 100%
+  );
+
+  background-size: 10px 10px;
+}
+
+.bg-stripes-purple-500 {
+  --stripes-color: rgba(168, 85, 247, 0.4);
+}
+
+.bg-stripes-gray-100 {
+  --stripes-color: rgba(55, 65, 81, 0.1);
+}
+.bg-stripes-gray-200 {
+  --stripes-color: rgba(55, 65, 81, 0.2);
+}
+.bg-stripes-gray-300 {
+  --stripes-color: rgba(55, 65, 81, 0.3);
+}
+.bg-stripes-gray-400 {
+  --stripes-color: rgba(55, 65, 81, 0.4);
+}
+.bg-stripes-gray-500 {
+  --stripes-color: rgba(55, 65, 81, 0.5);
+}
+.bg-stripes-gray-600 {
+  --stripes-color: rgba(55, 65, 81, 0.6);
+}
+.bg-stripes-gray-700 {
+  --stripes-color: rgba(55, 65, 81, 0.7);
+}
+.bg-stripes-gray-800 {
+  --stripes-color: rgba(55, 65, 81, 0.8);
+}
+.bg-stripes-gray-900 {
+  --stripes-color: rgba(55, 65, 81, 0.9);
+}
+
+/* Medias Queries propias */
+
+@media (max-width: 768px) {
+  /* #kind-receipt::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    background-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(70, 70, 70, 0.5) 100%
+    );
+  } */
+}
